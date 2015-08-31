@@ -7,10 +7,13 @@ var handlebars = require('express3-handlebars').create({defaultLayout:'main'});
 app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
 
+//static directory, it must be decleared before all the router
+app.use(express.static(__dirname + '/public'));
+
 //check env.PORT and set port
 app.set('port',process.env.PORT || 3000);
 
-//set routher for index page and about page
+//set router for index page and about page
 app.get('/',function(req,res){
 	res.render('home')
 })
