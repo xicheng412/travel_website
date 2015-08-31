@@ -4,6 +4,16 @@ var app = express();
 
 app.set('port',process.env.PORT || 3000);
 
+app.get('/',function(req,res){
+	res.type('text/plain');
+	res.send('Meadowlark travel');
+})
+
+app.get('/about',function(req,res){
+	res.type('text/plain');
+	res.send('about Meadowlark travel');
+})
+
 //set 404
 app.use(function(req,res){
 	res.type('text/plain');
