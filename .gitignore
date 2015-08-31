@@ -2,3 +2,10 @@
 #package installed by npm
 
 node_modules
+
+#~most like some editor's backup files
+*~
+
+#may be this is a cache file?
+.DS_Store
+
