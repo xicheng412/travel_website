@@ -1,4 +1,5 @@
 var express = require('express');
+var fortune = require('./lib/fortune.js')
 
 var app = express();
 
@@ -19,8 +20,7 @@ app.get('/',function(req,res){
 })
 
 app.get('/about',function(req,res){
-	var randomFortune=fortunes[Math.floor(Math.random()*fortunes.length)];
-	res.render('about',{ fortune : randomFortune });
+	res.render('about',{ fortune : fortune.getFortune() });
 })
 
 //set 404
@@ -40,11 +40,3 @@ app.listen(app.get('port'),function(){
 	console.log('Express started on port ' + app.get('port') + '. press ctrl+C to terminate.')
 })
 
-//fortune cookies
-var fortunes=[
-	"you are lucky",
-	"do not fear",
-	"this is a test",
-	"one more piece",
-	"do you have girlfriend?"
-]
