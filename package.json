@@ -1,0 +1,24 @@
+{
+  "name": "3_express_node_travel_web",
+  "version": "1.0.0",
+  "description": "a test in book \"web development with node and express\"",
+  "main": "meadowlark.js",
+  "dependencies": {
+    "express3-handlebars": "^0.5.2",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xicheng412/travel_website.git"
+  },
+  "author": "xicheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xicheng412/travel_website/issues"
+  },
+  "homepage": "https://github.com/xicheng412/travel_website#readme"
+}
