@@ -15,26 +15,36 @@ app.set('port',process.env.PORT || 3000);
 
 //set router for index page and about page
 app.get('/',function(req,res){
-	res.render('home')
+	res.render('home');
 })
 
 app.get('/about',function(req,res){
-	res.render('about')
+	var randomFortune=fortunes[Math.floor(Math.random()*fortunes.length)];
+	res.render('about',{ fortune : randomFortune });
 })
 
 //set 404
 app.use(function(req,res){
-	res.status(400)
-	res.render('404')
+	res.status(400);
+	res.render('404');
 })
 
 //set 500
 app.use(function(err,req,res,next){
 	console.log(err.stack);
-	res.status(500)
-	res.render('500')
+	res.status(500);
+	res.render('500');
 })
 
 app.listen(app.get('port'),function(){
 	console.log('Express started on port ' + app.get('port') + '. press ctrl+C to terminate.')
 })
+
+//fortune cookies
+var fortunes=[
+	"you are lucky",
+	"do not fear",
+	"this is a test",
+	"one more piece",
+	"do you have girlfriend?"
+]
