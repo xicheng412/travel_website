@@ -4,6 +4,7 @@
   "description": "a test in book \"web development with node and express\"",
   "main": "meadowlark.js",
   "dependencies": {
+    "body-parser": "^1.13.3",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "express3-handlebars": "^0.5.2"
